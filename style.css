@@ -1615,6 +1615,7 @@ h1.entry-title {
 }
 
 .featured-image img {
+	width: 100%;
 	display: block;
 }
 
