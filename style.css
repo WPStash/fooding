@@ -566,7 +566,7 @@ a:hover, a:focus, a:active {
 }
 
 a:focus {
-	outline: thin dotted;
+	outline: none;
 }
 
 a:hover, a:active {
@@ -588,6 +588,17 @@ a:hover, a:active {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
+}
+
+@media (max-width: 991px) {
+	.main-navigation .menu-primary-navigation-container {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		padding: 0 20px;
+		background: rgba(0, 0, 0, 0.7);
+		z-index: 9999;
+	}
 }
 
 .main-navigation ul {
@@ -639,6 +650,7 @@ a:hover, a:active {
 	.main-navigation ul ul li {
 		border: none;
 		padding: 0;
+		background: transparent;
 	}
 }
 
@@ -649,6 +661,13 @@ a:hover, a:active {
 	background: #fff;
 	color: #666;
 	text-shadow: none;
+}
+
+@media (max-width: 991px) {
+	.main-navigation ul ul a {
+		background: none;
+		color: #fff;
+	}
 }
 
 .main-navigation ul ul a:hover {

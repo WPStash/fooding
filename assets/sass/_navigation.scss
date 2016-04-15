@@ -14,7 +14,7 @@ a {
 		color: $color__link-hover;
 	}
 	&:focus {
-		outline: thin dotted;
+		outline: none;
 	}
 	&:hover,
 	&:active {
@@ -38,6 +38,16 @@ a {
     width: 100%;
     position: absolute;
     bottom: 0;
+	.menu-primary-navigation-container {
+		@include media-breakpoint-down(md) {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			padding: 0 20px;
+			background: rgba(0, 0, 0, 0.7);
+			z-index: 9999;
+		}
+	}
 	ul {
 		display: none;
 		list-style: none;
@@ -73,9 +83,10 @@ a {
 				&:last-child{
 					border-bottom: none;
 				}
-				@include media-breakpoint-down(md){
+				@include media-breakpoint-down(md) {
 					border: none;
 					padding: 0;
+					background: transparent;
 				}
 			}
 
@@ -86,7 +97,10 @@ a {
 				background: #fff;
 				color: #666;
 				text-shadow: none;
-
+				@include media-breakpoint-down(md) {
+					background: none;
+					color: #fff;
+				}
 				&:hover{
 					text-decoration: none;
 					color: #222;
@@ -182,7 +196,6 @@ a {
 		background: none;
 		box-shadow: none;
 		border: none;
-
 	}
 }
 

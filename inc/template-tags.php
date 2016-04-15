@@ -220,7 +220,7 @@ add_action( 'edit_category', 'fooding_category_transient_flusher' );
 add_action( 'save_post',     'fooding_category_transient_flusher' );
 
 
-if ( ! function_exists( 'fashify_the_custom_logo' ) ) :
+if ( ! function_exists( 'fooding_the_custom_logo' ) ) :
 /**
  * Displays the optional custom logo.
  *
@@ -228,7 +228,7 @@ if ( ! function_exists( 'fashify_the_custom_logo' ) ) :
  *
  * @since Fooding
  */
-function fashify_the_custom_logo() {
+function fooding_the_custom_logo() {
 	if ( function_exists( 'the_custom_logo' ) ) {
 		the_custom_logo();
 	}
