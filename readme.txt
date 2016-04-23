@@ -34,3 +34,5 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Font Awesome, SIL OFL 1.1. (http://scripts.sil.org/OFL) http://fortawesome.github.io/Font-Awesome/license/
 * jQuery Parallax, The MIT License (MIT) http://pixelcog.github.io/parallax.js/
+* sidebarEffects, Licensed under the MIT license. https://gist.github.com/Braunson/6887262
+* classie, class helper functions from bonzo https://github.com/ded/bonzo
