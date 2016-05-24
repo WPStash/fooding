@@ -40,6 +40,7 @@ function fooding_customize_register( $wp_customize ) {
 				// settings
 				$wp_customize->add_setting( 'fooding_homepage_layout',
 					array(
+						'sanitize_callback'	=> 'fooding_sanitize_select',
 						'default'           => 'default',
 					)
 				);
@@ -47,7 +48,7 @@ function fooding_customize_register( $wp_customize ) {
 				$wp_customize->add_control( 'fooding_homepage_layout',
 					array(
 						'label' 		=> esc_html__( 'Homepage Layout', 'fooding' ),
-						'type'			=> 'select',
+						'type'			=> 'radio',
 						'section' 	=> 'fooding_general',
 						'choices'   => array(
 							'default' => esc_html__( 'Default', 'fooding' ),
@@ -75,7 +76,7 @@ function fooding_customize_register( $wp_customize ) {
 				$wp_customize->add_control( 'fooding_archive_layout',
 					array(
 						'label' 		=> esc_html__( 'Archive/Search layout:', 'fooding' ),
-						'type'			=> 'select',
+						'type'			=> 'radio',
 						'section' 		=> 'archive_layout',
 						'choices'   	=> array (
 							'default'	=> esc_html__( 'Default', 'fooding' ),
@@ -110,10 +111,18 @@ function fooding_customize_register( $wp_customize ) {
 					)
 				);
 
-				$wp_customize->add_setting( 'fooding_staff_picks_cat',
+				$wp_customize->add_setting( 'fooding_staff_picks_tags',
 					array(
-						'sanitize_callback'	=> 'fooding_sanitize_select',
+						'sanitize_callback'	=> 'fooding_sanitize_text',
 						'default'           => '',
+					)
+				);
+				$wp_customize->add_control( 'fooding_staff_picks_tags',
+					array(
+						//'label' 		=> esc_html__( 'Number:', 'fooding' ),
+						'type'			=> 'text',
+						'section' 		=> 'staff_picks',
+						'description'	=> esc_html__( 'Enter post tags, separated by commas and without space.', 'fooding' )
 					)
 				);
 
@@ -125,7 +134,7 @@ function fooding_customize_register( $wp_customize ) {
 				);
 				$wp_customize->add_control( 'number_staff_picks',
 					array(
-						'label' 		=> esc_html__( 'Number:', 'fooding' ),
+						//'label' 		=> esc_html__( 'Number:', 'fooding' ),
 						'type'			=> 'text',
 						'section' 		=> 'staff_picks',
 						'description'	=> esc_html__( 'Enter number post display on Staff section.', 'fooding' )
@@ -137,6 +146,7 @@ function fooding_customize_register( $wp_customize ) {
 
 				// Primary color setting
 				$wp_customize->add_setting( 'primary_color' , array(
+					'sanitize_callback'	=> 'fooding_sanitize_hex_color',
 				    'default'     => '#a4cc00',
 				) );
 
@@ -148,6 +158,7 @@ function fooding_customize_register( $wp_customize ) {
 
 				// Second color setting
 				$wp_customize->add_setting( 'secondary_color' , array(
+					'sanitize_callback'	=> 'fooding_sanitize_hex_color',
 				    'default'     => '#444',
 				) );
 				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(

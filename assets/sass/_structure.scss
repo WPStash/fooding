@@ -87,10 +87,14 @@
     .site-branding {
         float: none;
         position: absolute;
-        bottom: 130px;
+        bottom: 30px;
+        left: 0;
         margin: 0;
         padding: 0;
         width: 100%;
+        @include media-breakpoint-up(sm) {
+            bottom: 130px;
+        }
         @include media-breakpoint-down(md) {
             float: none;
             text-align: center;
@@ -150,17 +154,21 @@
 
 .content-area {
     float: left;
-    width: 65%;
-    @include media-breakpoint-down(md){
-        width: 100%;
+    width: 100%;
+    @include media-breakpoint-up(md){
+        width: 65%;
     }
+}
+.content-area.no-sidebar {
+    width: 100%;
 }
 .sidebar {
     float: right;
-    width: 30%;
-    @include media-breakpoint-down(md){
-        width: 100%;
-        margin-top: 40px;
+    width: 100%;
+    margin-top: 40px;
+    @include media-breakpoint-up(md){
+        width: 30%;
+        margin-top: 0px;
     }
     .widget {
         background: #fff;
@@ -171,10 +179,10 @@
 
 /* Home post layout */
 .post-grid {
-    width: 47.5%;
+    width: 100%;
     background: #fff;
-	@include media-breakpoint-down(sm) {
-		width: 100%;
+	@include media-breakpoint-up(sm) {
+		width: 47.5%;
 	}
     .featured-image {
         margin: 0;
@@ -323,7 +331,7 @@
         .widget {
             box-sizing: border-box;
             float: left;
-            width: 25%;
+            width: 100%;
             margin-bottom: 20px;
             padding: 0 20px;
             li {
@@ -331,9 +339,11 @@
                 margin-bottom: 7px;
                 padding-bottom: 7px;
             }
-            @include media-breakpoint-down(sm) {
-                width: 100%;
-                padding: 0;
+            @include media-breakpoint-up(sm) {
+                width: 49%;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 25%;
             }
         }
     }

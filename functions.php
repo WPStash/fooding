@@ -101,10 +101,10 @@ function fooding_fonts_url() {
 
 	/*
 	 * Translators: If there are characters in your language that are not supported
-	 * by Noto Sans, translate this to 'off'. Do not translate into your own language.
+	 * by Open Sans, translate this to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Droid Sans font: on or off', 'fooding' ) ) {
-		$fonts[] = 'Droid Sans:400italic,600italic,700italic,400,600,700';
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'fooding' ) ) {
+		$fonts[] = 'Open Sans:400italic,600italic,700italic,400,600,700';
 	}
 
 	/*
@@ -201,6 +201,12 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * jetpack
+ */
+//require get_template_directory() . '/inc/jetpack.php';
+
 
 /**
  * Customizer additions.

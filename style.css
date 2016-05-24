@@ -9,7 +9,7 @@ Version: 0.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fooding
-Tags: white, custom-colors, fixed-width, custom-menu, editor-style, featured-images, full-width-template, two-columns, right-sidebar, translation-ready
+Tags: white, custom-colors, fixed-layout, responsive-layout, custom-menu, editor-style, featured-images, full-width-template, two-columns, right-sidebar, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -272,7 +272,7 @@ input,
 select,
 textarea {
 	color: #494949;
-	font-family: "Open Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 1.5;
 }
@@ -801,6 +801,10 @@ a:hover, a:active {
 	z-index: 9999;
 }
 
+.st-menu .btn-close-home .close-button:hover {
+	background-color: #111;
+}
+
 .st-menu .btn-close-home .home-button {
 	background: #a4cc00 none repeat scroll 0 0;
 	border: medium none;
@@ -812,6 +816,10 @@ a:hover, a:active {
 	padding: 0;
 	text-align: center;
 	width: 35px;
+}
+
+.st-menu .btn-close-home .home-button:hover {
+	background-color: #111;
 }
 
 .st-menu .search-form {
@@ -881,6 +889,7 @@ a:hover, a:active {
 	text-align: center;
 	width: 35px;
 	z-index: 9999;
+	position: relative;
 	display: none;
 }
 
@@ -1232,6 +1241,26 @@ a:hover, a:active {
 	margin-bottom: 20px;
 }
 
+@media (min-width: 499px) and (max-width: 991px) {
+	.widget {
+		float: left;
+		padding-right: 20px;
+		width: 47.5%;
+	}
+	.widget:nth-of-type(2n) {
+		float: right;
+	}
+	.widget:nth-of-type(2n + 1) {
+		clear: both;
+	}
+}
+
+@media (min-width: 768px) {
+	.widget {
+		width: 100%;
+	}
+}
+
 .widget-title {
 	padding-bottom: 15px;
 	margin-bottom: 20px;
@@ -1406,10 +1435,17 @@ a:hover, a:active {
 .site-header .site-branding {
 	float: none;
 	position: absolute;
-	bottom: 130px;
+	bottom: 30px;
+	left: 0;
 	margin: 0;
 	padding: 0;
 	width: 100%;
+}
+
+@media (min-width: 499px) {
+	.site-header .site-branding {
+		bottom: 130px;
+	}
 }
 
 @media (max-width: 991px) {
@@ -1478,24 +1514,29 @@ a:hover, a:active {
 
 .content-area {
 	float: left;
-	width: 65%;
+	width: 100%;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 768px) {
 	.content-area {
-		width: 100%;
+		width: 65%;
 	}
+}
+
+.content-area.no-sidebar {
+	width: 100%;
 }
 
 .sidebar {
 	float: right;
-	width: 30%;
+	width: 100%;
+	margin-top: 40px;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 768px) {
 	.sidebar {
-		width: 100%;
-		margin-top: 40px;
+		width: 30%;
+		margin-top: 0px;
 	}
 }
 
@@ -1507,13 +1548,13 @@ a:hover, a:active {
 
 /* Home post layout */
 .post-grid {
-	width: 47.5%;
+	width: 100%;
 	background: #fff;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 499px) {
 	.post-grid {
-		width: 100%;
+		width: 47.5%;
 	}
 }
 
@@ -1670,7 +1711,7 @@ a:hover, a:active {
 .site-footer .footer-widgets .widget {
 	box-sizing: border-box;
 	float: left;
-	width: 25%;
+	width: 100%;
 	margin-bottom: 20px;
 	padding: 0 20px;
 }
@@ -1681,10 +1722,15 @@ a:hover, a:active {
 	padding-bottom: 7px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 499px) {
 	.site-footer .footer-widgets .widget {
-		width: 100%;
-		padding: 0;
+		width: 49%;
+	}
+}
+
+@media (min-width: 992px) {
+	.site-footer .footer-widgets .widget {
+		width: 25%;
 	}
 }
 

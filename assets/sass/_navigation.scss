@@ -221,6 +221,9 @@ a {
 			text-align: center;
 			width: 35px;
 			z-index: 9999;
+			&:hover {
+				background-color: $color__black;
+			}
 		}
 		.home-button {
 			background: #a4cc00 none repeat scroll 0 0;
@@ -233,6 +236,9 @@ a {
 			padding: 0;
 			text-align: center;
 			width: 35px;
+			&:hover {
+				background-color: $color__black;
+			}
 		}
 	}
 	.search-form {
@@ -302,6 +308,7 @@ a {
 	text-align: center;
 	width: 35px;
 	z-index: 9999;
+	position: relative;
 	display: none;
 	@include media-breakpoint-down(md) {
 		display: inline-block;
