@@ -107,6 +107,10 @@ function fooding_fonts_url() {
 		$fonts[] = 'Open Sans:400italic,600italic,700italic,400,600,700';
 	}
 
+	if ( 'off' !== _x( 'on', 'Droid Sans font: on or off', 'fooding' ) ) {
+		$fonts[] = 'Droid Sans:400italic,600italic,700italic,400,600,700';
+	}
+
 	/*
 	 * Translators: To add an additional character subset specific to your language,
 	 * translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
@@ -147,8 +151,8 @@ function fooding_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'fooding' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 
 	register_sidebar( array(

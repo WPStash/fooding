@@ -10,7 +10,8 @@ Stable tag: 0.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called Fooding, or underscores.
+Fooding Theme, Copyright 2016 FameThemes
+Fooding is distributed under the terms of the GNU GPL
 
 == Description ==
 

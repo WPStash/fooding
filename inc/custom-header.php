@@ -25,8 +25,8 @@ function fooding_custom_header_setup() {
 		'default-image'          => get_template_directory_uri() . '/assets/images/header.jpg',
 		'default-text-color'     => '000000',
 		'width'                  => 1500,
-		'height'                 => 600,
-		'flex-height'            => true,
+		'height'                 => 400,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'fooding_header_style',
 	) ) );
 }

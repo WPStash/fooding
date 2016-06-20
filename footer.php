@@ -24,19 +24,23 @@
 
 			?>
 
+			<?php if ( is_active_sidebar( 'footer' ) ) {  ?>
 			<div class="footer-widgets">
 				<div class="container">
 					<?php
-						if ( is_active_sidebar( 'footer' ) ) {
 							dynamic_sidebar( 'footer' );
-						}
 					?>
 				</div>
 			</div>
+			<?php } ?>
 
 			<div class="site-info">
 				<div class="container">
-					<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ) ?>
+					<?php
+					if ( has_nav_menu( 'footer' ) ) {
+						wp_nav_menu( array( 'theme_location' => 'footer' ) ) ;
+					}
+					?>
 
 					<?php
 					/**
