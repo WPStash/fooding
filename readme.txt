@@ -1,11 +1,12 @@
 === Fooding ===
 
 Contributors: famethemes
-Tags: white, custom-colors, fixed-width, custom-menu, editor-style, featured-images, full-width-template, two-columns, right-sidebar, translation-ready
+Tags: one-column, two-columns, right-sidebar, grid-layout, footer-widgets, blog, news, photography, custom-menu, custom-header, custom-colors, custom-background, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 0.0.1
+Stable tag: 0.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,10 +24,7 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 
 == Frequently Asked Questions ==
 
-== Changelog ==
 
-= 0.0.1 =
-* Initial release
 
 == Credits ==
 
@@ -36,3 +34,10 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 * jQuery Parallax, The MIT License (MIT) http://pixelcog.github.io/parallax.js/
 * sidebarEffects, Licensed under the MIT license. https://gist.github.com/Braunson/6887262
 * classie, class helper functions from bonzo https://github.com/ded/bonzo
+* Image use in screenshot: https://www.pexels.com/photo/lemons-bouquet-cookies-food-8989/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/food-breakfast-fork-bagel-6492/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+
+== Changelog ==
+
+= 0.0.3 =
+* Initial release

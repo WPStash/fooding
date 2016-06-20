@@ -38,11 +38,13 @@
 				<div class="container">
 					<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ) ?>
 
-					<div class="site-copyright">
-						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fooding' ) ); ?>"><?php printf( esc_html__( 'Powered by %s', 'fooding' ), 'WordPress' ); ?></a>
-						<span class="sep"> . </span>
-						<?php printf( esc_html__( 'Theme by %2$s.', 'fooding' ), 'fooding', '<a href="https://wpstash.com" rel="designer">WPStash</a>' ); ?>
-					</div>
+					<?php
+					/**
+					* hooked fooding_footer_site_info
+					* @see fooding_footer_site_info
+					*/
+					do_action('fooding_footer_site_info');
+					?>
 				</div>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->

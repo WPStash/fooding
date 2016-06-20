@@ -71,7 +71,7 @@ get_header(); ?>
 				'prev_next' => True,
 				'prev_text' => '',
 				'next_text' => '',
-				'before_page_number' => '<span class="screen-reader-text">' . __('Page', 'fooding') . ' </span>',
+				'before_page_number' => '<span class="screen-reader-text">' . esc_html__('Page', 'fooding') . ' </span>',
 			));
 			echo '</div>';
 		}

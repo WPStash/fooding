@@ -234,3 +234,19 @@ function fooding_the_custom_logo() {
 	}
 }
 endif;
+
+
+if ( ! function_exists( 'fooding_footer_site_info' ) ) {
+
+    function fooding_footer_site_info()
+    {
+        ?>
+		<div class="site-copyright">
+	        <?php printf(esc_html__('Copyright %1$s %2$s %3$s', 'fooding'), '&copy;', esc_attr(date('Y')), esc_attr(get_bloginfo())); ?>
+	        <span class="sep"> &ndash; </span>
+	        <?php printf(esc_html__('%1$s theme by %2$s', 'fooding'), 'fooding', '<a href="' . esc_url('https://wpstash.com', 'fooding') . '">WPStash</a>' ); ?>
+		</div>
+		<?php
+    }
+}
+add_action( 'fooding_footer_site_info', 'fooding_footer_site_info' );
