@@ -5,7 +5,7 @@ Theme URI: https://wpstash.com/themes/fooding
 Author: WPStash
 Author URI: https://wpstash.com
 Description: Fooding is a good-looking, featured-packed theme that allows you to tell your story in a dynamic, attractive and enjoyable way, making it perfect for food and recipes related websites.
-Version: 0.0.3
+Version: 0.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fooding
@@ -901,31 +901,31 @@ a:hover, a:active {
 }
 
 /* Footer Menu */
-.site-footer .menu-footer-menu-container {
+.site-footer .footer_menu {
 	margin: 0 0 5px 0;
 	padding: 0;
 }
 
 @media (max-width: 767px) {
-	.site-footer .menu-footer-menu-container {
+	.site-footer .footer_menu {
 		float: none;
 	}
 }
 
-.site-footer .menu-footer-menu-container ul {
+.site-footer .footer_menu ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 }
 
-.site-footer .menu-footer-menu-container ul li {
+.site-footer .footer_menu ul li {
 	display: inline-block;
 	margin-right: 30px;
 	position: relative;
 }
 
-.site-footer .menu-footer-menu-container ul li::after {
+.site-footer .footer_menu ul li::after {
 	content: "· ";
 	font-size: 24px;
 	line-height: 1;
@@ -934,17 +934,17 @@ a:hover, a:active {
 	top: -1px;
 }
 
-.site-footer .menu-footer-menu-container ul li:last-child::after {
+.site-footer .footer_menu ul li:last-child::after {
 	content: '';
 }
 
-.site-footer .menu-footer-menu-container ul li a {
+.site-footer .footer_menu ul li a {
 	color: #aaa;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-.site-footer .menu-footer-menu-container ul li a:hover {
+.site-footer .footer_menu ul li a:hover {
 	text-decoration: underline;
 }
 
@@ -1839,6 +1839,7 @@ h1.entry-title {
 	position: relative;
 	padding: 30px 25px 15px 25px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	background: #fff;
 }
 
 .no-post-thumbnail .entry-info {
