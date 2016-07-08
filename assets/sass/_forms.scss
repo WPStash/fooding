@@ -52,14 +52,11 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"] {
+input[type="search"],
+textarea {
 	padding: 12px;
 }
 
-textarea {
-	padding-left: 3px;
-	width: 100%;
-}
 form {
 	label {
 		font-size: 14px;
