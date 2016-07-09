@@ -23,7 +23,7 @@
 function fooding_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'fooding_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/assets/images/header.jpg',
-		'default-text-color'     => '000000',
+		'default-text-color'     => 'ffffff',
 		'width'                  => 1500,
 		'height'                 => 400,
 		'flex-height'            => false,

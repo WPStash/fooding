@@ -142,8 +142,6 @@ function fooding_customize_register( $wp_customize ) {
 				);
 
 
-
-
 				// Primary color setting
 				$wp_customize->add_setting( 'primary_color' , array(
 					'sanitize_callback'	=> 'fooding_sanitize_hex_color',

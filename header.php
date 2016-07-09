@@ -54,11 +54,17 @@
 						<?php
 						if ( is_front_page() && is_home() ) : ?>
 							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-							<span class="site-title-separate"></span>
+
 						<?php else : ?>
 							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+
 						<?php
 						endif;
+
+						if ( display_header_text() ) :
+						echo '<span class="site-title-separate"></span>';
+						endif;
+
 
 						$description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
