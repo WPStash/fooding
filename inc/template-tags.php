@@ -244,7 +244,7 @@ if ( ! function_exists( 'fooding_footer_site_info' ) ) {
 		<div class="site-copyright">
 	        <?php printf(esc_html__('Copyright %1$s %2$s %3$s', 'fooding'), '&copy;', esc_attr(date('Y')), esc_attr(get_bloginfo())); ?>
 	        <span class="sep"> &ndash; </span>
-	        <?php printf(esc_html__('%1$s theme by %2$s', 'fooding'), 'Fooding', '<a href="' . esc_url('https://wpstash.com', 'fooding') . '">WPStash</a>' ); ?>
+	        <?php printf(esc_html__('%1$s theme designed by %2$s.', 'fooding'), 'Fooding', '<a href="' . esc_url('https://wpstash.com', 'fooding') . '">WPStash</a>' ); ?>
 		</div>
 		<?php
     }
