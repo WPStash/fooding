@@ -352,7 +352,6 @@
     }
 
     .site-info {
-        color: #aaa;
         padding: 25px 0;
         margin: 0;
         font-size: 14px;
@@ -361,7 +360,6 @@
             font-size: 12px;
             line-height: 1.75;
             a {
-                color: #aaa;
                 text-decoration: none;
             }
             @include media-breakpoint-down(sm) {
