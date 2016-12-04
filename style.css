@@ -1432,7 +1432,7 @@ a:hover, a:active {
 }
 
 .site-header .site-branding {
-	float: none;
+	float: left;
 	position: absolute;
 	bottom: 30px;
 	left: 0;
@@ -1454,24 +1454,29 @@ a:hover, a:active {
 	}
 }
 
-.site-header .site-branding .site-title-separate {
-	background: #fff;
-	display: inline-block;
-	width: 160px;
-	height: 1px;
-	margin: 0 auto 5px auto;
-}
-
 .site-header .site-branding .site-title {
 	font-size: 40px;
 	text-decoration: none;
-	margin: 5px 0 0 0;
+	margin: 5px 0 15px 0;
+	position: relative;
+	padding-bottom: 15px;
 }
 
 .site-header .site-branding .site-title a {
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
+}
+
+.site-header .site-branding .site-title:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 1px;
+	width: 15%;
+	left: 42%;
+	display: block;
+	background: #fff;
 }
 
 .site-header .site-branding .site-description {
@@ -1548,7 +1553,7 @@ a:hover, a:active {
 .sidebar .widget {
 	background: #fff;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-	padding: 30px;
+	padding: 25px;
 }
 
 /* Home post layout */
@@ -1786,7 +1791,7 @@ h1.entry-title {
 }
 
 .page .hentry, .single .hentry {
-	padding: 45px 35px 35px 35px;
+	padding: 25px;
 	background: #fff;
 	border: none;
 	margin-bottom: 40px;
@@ -1800,6 +1805,10 @@ h1.entry-title {
 .single .entry-content {
 	margin-top: 1.0625rem;
 	margin-bottom: 0;
+}
+
+.single .entry-thumb {
+	margin: -25px -25px 20px;
 }
 
 .updated:not(.published) {
@@ -1833,7 +1842,7 @@ h1.entry-title {
 
 .entry-info {
 	position: relative;
-	padding: 30px 25px 15px 25px;
+	padding: 25px 25px 15px 25px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	background: #fff;
 }

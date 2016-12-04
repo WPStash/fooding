@@ -52,7 +52,7 @@ function fooding_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'fooding-default', 338, 210, true );
-	add_image_size( 'fooding-homepage-1', 673, 320, true );
+	add_image_size( 'fooding-homepage-1', 676, 320, true );
 	add_image_size( 'fooding-staff-picks', 330, 210, true );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -178,6 +178,7 @@ function fooding_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/font-awesome.min.css', array(), '4.5' );
 
 	wp_enqueue_style( 'fooding-style', get_stylesheet_uri() );
+	
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'fooding-js-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), '1.0.0', true );

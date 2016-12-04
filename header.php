@@ -61,11 +61,6 @@
 						<?php
 						endif;
 
-						if ( display_header_text() ) :
-						echo '<span class="site-title-separate"></span>';
-						endif;
-
-
 						$description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
 							<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>

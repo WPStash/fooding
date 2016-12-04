@@ -250,3 +250,37 @@ if ( ! function_exists( 'fooding_footer_site_info' ) ) {
     }
 }
 add_action( 'fooding_footer_site_info', 'fooding_footer_site_info' );
+
+add_action( 'wp_enqueue_scripts', 'fooding_custom_inline_style', 100 );
+if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
+
+    function fooding_custom_inline_style()
+    {
+		// Add extra styling to patus-style
+		$primary   = esc_attr( get_theme_mod( 'primary_color', '#a4cc00' ) );
+		$secondary = esc_attr( get_theme_mod( 'secondary_color', '#444444' ) );
+		$custom_css = "
+				.navigation .current, h2.entry-title a, h2.entry-title a, .site-footer .footer_menu ul li a, .widget-title { color: {$secondary}; }
+
+				.entry-meta a,.comments-area .logged-in-as a,a:hover,a.read-more{ color : {$primary};}
+				.st-menu .btn-close-home .close-button,
+				.st-menu .btn-close-home .home-button,
+				button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"]{
+					background-color: {$primary};
+					border-color : {$primary};
+				}
+
+				button:hover, input[type=\"button\"]:hover,
+				input[type=\"reset\"]:hover,
+				input[type=\"submit\"]:hover,
+				.st-menu .btn-close-home .home-button:hover,
+				.st-menu .btn-close-home .close-button:hover {
+						background: {$secondary};
+						border-color: {$secondary};
+				}";
+
+
+		wp_add_inline_style( 'fooding-style', $custom_css );
+	}
+
+}
