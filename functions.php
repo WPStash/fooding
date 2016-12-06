@@ -134,7 +134,7 @@ function fooding_fonts_url() {
 		), 'https://fonts.googleapis.com/css' );
 	}
 
-	return $fonts_url;
+	return esc_url_raw( $fonts_url );
 }
 endif;
 
@@ -175,10 +175,10 @@ function fooding_scripts() {
 	wp_enqueue_style( 'fooding-fonts', fooding_fonts_url(), array(), null );
 
 	// Add Font Awesome, used in the main stylesheet.
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/font-awesome.min.css', array(), '4.5' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5' );
 
 	wp_enqueue_style( 'fooding-style', get_stylesheet_uri() );
-	
+
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'fooding-js-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), '1.0.0', true );

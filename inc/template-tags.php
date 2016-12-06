@@ -103,7 +103,7 @@ function fooding_entry_footer() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'fooding' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( esc_html( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'fooding' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 

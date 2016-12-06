@@ -65,16 +65,16 @@ get_header(); ?>
 		endif;
 
 
-		if (  $wp_query->max_num_pages > 1 ) {
-			echo '<div class="post-pagination">';
-			the_posts_pagination(array(
-				'prev_next' => True,
-				'prev_text' => '',
-				'next_text' => '',
-				'before_page_number' => '<span class="screen-reader-text">' . esc_html__('Page', 'fooding') . ' </span>',
-			));
-			echo '</div>';
-		}
+
+		echo '<div class="post-pagination">';
+		the_posts_pagination(array(
+			'prev_next' => True,
+			'prev_text' => '',
+			'next_text' => '',
+			'before_page_number' => '<span class="screen-reader-text">' . esc_html__('Page', 'fooding') . ' </span>',
+		));
+		echo '</div>';
+
 
 		 ?>
 		</main><!-- #main -->

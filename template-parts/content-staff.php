@@ -10,7 +10,6 @@
 <div class="footer-staff-picks">
 
     		<?php
-
             $tags = get_theme_mod( 'fooding_staff_picks_tags' );
             $number   = intval( get_theme_mod( 'number_staff_picks', 5 ) );
             $number   = ( 0 != $number ) ? $number : 5;
@@ -20,7 +19,7 @@
 
 		    <?php
             if ( $staff_picks->have_posts() ) :
-			    while($staff_picks->have_posts()): $staff_picks->the_post();
+			    while( $staff_picks->have_posts() ): $staff_picks->the_post();
             ?>
 
 			<!-- begin .hentry -->
@@ -41,6 +40,6 @@
             endif;
             ?>
 
-    		<?php wp_reset_query(); ?>
+    		<?php wp_reset_postdata(); ?>
 
 </div>
