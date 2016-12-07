@@ -366,18 +366,18 @@
     .site-info {
         padding: 25px 0;
         margin: 0;
-        font-size: 14px;
+        font-size: 13px;
         text-align: center;
         .site-copyright {
-            font-size: 12px;
-            line-height: 1.75;
-            a {
-                text-decoration: none;
-            }
+            float: left;
             @include media-breakpoint-down(sm) {
                 float: none;
-                clear: both;
-                text-align: center;
+            }
+        }
+        .theme-info-text {
+            float: right;
+            @include media-breakpoint-down(sm) {
+                float: none;
             }
         }
     }

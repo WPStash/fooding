@@ -36,19 +36,12 @@
 
 			<div class="site-info">
 				<div class="container">
-					<?php
-					if ( has_nav_menu( 'footer' ) ) {
-						wp_nav_menu( array( 'theme_location' => 'footer', 'container_class' => 'footer_menu' ) ) ;
-					}
-					?>
 
-					<?php
-					/**
-					* hooked fooding_footer_site_info
-					* @see fooding_footer_site_info
-					*/
-					do_action('fooding_footer_site_info');
-					?>
+					<div class="site-copyright">
+						<?php printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved.', 'fooding' ), date( 'Y' ), get_bloginfo( 'name' ) ); ?>
+					</div>
+
+					<?php do_action('fooding_footer_site_info'); ?>
 				</div>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->

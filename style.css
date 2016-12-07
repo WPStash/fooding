@@ -1432,7 +1432,7 @@ a:hover, a:active {
 }
 
 .site-header .site-branding {
-	float: left;
+	float: none;
 	position: absolute;
 	bottom: 30px;
 	left: 0;
@@ -1747,24 +1747,27 @@ a:hover, a:active {
 .site-footer .site-info {
 	padding: 25px 0;
 	margin: 0;
-	font-size: 14px;
+	font-size: 13px;
 	text-align: center;
 }
 
 .site-footer .site-info .site-copyright {
-	font-size: 12px;
-	line-height: 1.75;
-}
-
-.site-footer .site-info .site-copyright a {
-	text-decoration: none;
+	float: left;
 }
 
 @media (max-width: 767px) {
 	.site-footer .site-info .site-copyright {
 		float: none;
-		clear: both;
-		text-align: center;
+	}
+}
+
+.site-footer .site-info .theme-info-text {
+	float: right;
+}
+
+@media (max-width: 767px) {
+	.site-footer .site-info .theme-info-text {
+		float: none;
 	}
 }
 
