@@ -21,11 +21,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		global $wp_query;
-		$total_pages = $wp_query->max_num_pages;
-		$current_page = max(1, get_query_var('paged'));
-		$homepage_layout = get_theme_mod( 'fooding_homepage_layout', 'default' );
-		$count = 0;
 		if ( have_posts() ) :
 
 			/* Start the Loop */
@@ -36,26 +31,8 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				switch ( $homepage_layout ) {
-		 			case 'home1':
-		 				get_template_part( 'template-parts/content', 'grid-large' );
-		 				break;
+				get_template_part( 'template-parts/content', 'grid-large' );
 
-		 			case 'home2':
-						if ( $count == 0) {
-							get_template_part( 'template-parts/content', 'grid-large' );
-						}
-						else {
-							get_template_part( 'template-parts/content', 'grid' );
-						}
-		 				break;
-
-		 			default:
-		 				get_template_part( 'template-parts/content', 'grid' );
-		 				break;
-		 		}
-
-			$count++;
 			endwhile;
 
 		else :
@@ -64,11 +41,9 @@ get_header(); ?>
 
 		endif;
 
-
-
 		echo '<div class="post-pagination">';
 		the_posts_pagination(array(
-			'prev_next' => True,
+			'prev_next' => true,
 			'prev_text' => '',
 			'next_text' => '',
 			'before_page_number' => '<span class="screen-reader-text">' . esc_html__('Page', 'fooding') . ' </span>',

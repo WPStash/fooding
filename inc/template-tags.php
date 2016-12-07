@@ -260,7 +260,9 @@ if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
 		$custom_css = "
 				.navigation .current, h2.entry-title a, h2.entry-title a, .site-footer .footer_menu ul li a, .widget-title { color: {$secondary}; }
 
-				.entry-meta a,.comments-area .logged-in-as a,a:hover,a.read-more{ color : {$primary};}
+				.entry-meta a,.comments-area .logged-in-as a,a:hover,a.read-more ,
+				.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a
+				{ color : {$primary};}
 				.st-menu .btn-close-home .close-button,
 				.st-menu .btn-close-home .home-button,
 				button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"]{
@@ -273,7 +275,7 @@ if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
 				input[type=\"submit\"]:hover,
 				.st-menu .btn-close-home .home-button:hover,
 				.st-menu .btn-close-home .close-button:hover {
-						background: {$secondary};
+						background-color: {$secondary};
 						border-color: {$secondary};
 				}";
 

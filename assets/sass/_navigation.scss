@@ -104,8 +104,7 @@ a {
 					color: #fff;
 				}
 				&:hover{
-					text-decoration: none;
-					color: #222;
+					color: $color__primary;
 				}
 			}
 
@@ -157,9 +156,6 @@ a {
 		text-transform: uppercase;
 		@include media-breakpoint-down(md) {
 			padding: 12px 0;
-		}
-		&:hover {
-			text-decoration: underline;
 		}
 	}
 

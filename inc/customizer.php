@@ -47,7 +47,8 @@ function fooding_customize_register( $wp_customize ) {
 
 				$wp_customize->add_control( 'fooding_homepage_layout',
 					array(
-						'label' 		=> esc_html__( 'Homepage Layout', 'fooding' ),
+						'label' 		=> esc_html__( 'Frontpage Layout', 'fooding' ),
+						'description'   => 'Only apply when frontpage is a static page',
 						'type'			=> 'radio',
 						'section' 	=> 'fooding_general',
 						'choices'   => array(

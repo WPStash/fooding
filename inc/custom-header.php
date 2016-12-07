@@ -26,7 +26,8 @@ function fooding_custom_header_setup() {
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1500,
 		'height'                 => 400,
-		'flex-height'            => false,
+		'flex-height'            => true,
+		'flex-width'             => true,
 		'wp-head-callback'       => 'fooding_header_style',
 	) ) );
 }
@@ -61,6 +62,9 @@ function fooding_header_style() {
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
 		}
+		.site-header .site-branding .site-title::after {
+			display: none;
+		}
 	<?php
 		// If the user has set a custom color for the text use that.
 		else :
@@ -69,6 +73,7 @@ function fooding_header_style() {
 		.site-description {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
+		
 	<?php endif; ?>
 	</style>
 	<?php

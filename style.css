@@ -673,8 +673,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a:hover {
-	text-decoration: none;
-	color: #222;
+	color: #a4cc00;
 }
 
 @media (max-width: 991px) {
@@ -725,10 +724,6 @@ a:hover, a:active {
 	.main-navigation a {
 		padding: 12px 0;
 	}
-}
-
-.main-navigation a:hover {
-	text-decoration: underline;
 }
 
 .main-navigation .current_page_item > a,
@@ -1456,6 +1451,7 @@ a:hover, a:active {
 
 .site-header .site-branding .site-title {
 	font-size: 40px;
+	line-height: 40px;
 	text-decoration: none;
 	margin: 5px 0 15px 0;
 	position: relative;
@@ -1783,6 +1779,10 @@ a:hover, a:active {
 
 .hentry {
 	margin: 0 0 2em;
+}
+
+.home.page .hentry {
+	padding: 0;
 }
 
 h1.entry-title {
