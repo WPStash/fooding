@@ -252,7 +252,7 @@ add_action( 'fooding_footer_site_info', 'fooding_footer_site_info' );
 add_action( 'wp_enqueue_scripts', 'fooding_custom_inline_style', 100 );
 if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
 
-    function fooding_custom_inline_style()
+	function fooding_custom_inline_style()
     {
 		// Add extra styling to patus-style
 		$primary   = esc_attr( get_theme_mod( 'primary_color', '#a4cc00' ) );
