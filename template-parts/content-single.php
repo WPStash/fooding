@@ -37,11 +37,11 @@
 	<?php } ?>
 
 	<?php the_post_navigation( array(
-            'prev_text'                  => __( '<span>Previous article</span> %title' ),
-            'next_text'                  => __( '<span>Next article</span> %title' ),
+            'prev_text'                  => __( '<span>Previous article</span> %title', 'fooding' ),
+            'next_text'                  => __( '<span>Next article</span> %title', 'fooding' ),
             'in_same_term'               => true,
             'taxonomy'                   => __( 'post_tag' ),
-            'screen_reader_text' => __( 'Continue Reading' ),
+            'screen_reader_text' => __( 'Continue Reading', 'fooding' ),
         ) ); ?>
 
 	<footer class="entry-footer">
