@@ -87,32 +87,23 @@
     .site-branding {
         float: none;
         position: absolute;
-        bottom: 30px;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         margin: 0;
         padding: 0;
         width: 100%;
-        @include media-breakpoint-up(sm) {
-            bottom: 130px;
-        }
         @include media-breakpoint-down(md) {
             float: none;
             text-align: center;
         }
-        // .site-title-separate {
-        //     background: #fff;
-        //     display: inline-block;
-        //     width: 160px;
-        //     height: 1px;
-        //     margin: 0 auto 5px auto;
-        // }
         .site-title {
             font-size: 40px;
             line-height: 40px;
             text-decoration: none;
             margin: 5px 0 15px 0;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
             a {
                 color: $color__white;
                 text-decoration: none;
@@ -122,7 +113,7 @@
                 content: '';
                 position: absolute;
                 bottom: 0;
-                height: 1px;
+                height: 2px;
                 width: 15%;
                 left: 42%;
                 display: block;

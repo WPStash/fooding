@@ -17,8 +17,8 @@ get_header(); ?>
 
 		<?php
 		global $wp_query;
-		$args = array( 'post_type' => 'post', 'paged' => $paged, );
-		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+		$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+		$args = array( 'post_type' => 'post', 'paged' => $paged );
 
 		$enable_staff_picks = get_theme_mod( 'fooding_staff_picks', true ) ;
 		if ( $enable_staff_picks == true ) {
@@ -26,7 +26,6 @@ get_header(); ?>
 		}
 
         $query = new WP_Query( $args );
-
 
 		$homepage_layout = get_theme_mod( 'fooding_homepage_layout', 'default' );
 		$count = 0;

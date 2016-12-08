@@ -35,10 +35,15 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 * jQuery Parallax, The MIT License (MIT) http://pixelcog.github.io/parallax.js/
 * sidebarEffects, Licensed under the MIT license. https://gist.github.com/Braunson/6887262
 * classie, class helper functions from bonzo https://github.com/ded/bonzo
-* Image use in screenshot: https://www.pexels.com/photo/lemons-bouquet-cookies-food-8989/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
-* Image use in screenshot: https://www.pexels.com/photo/food-breakfast-fork-bagel-6492/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/desk-coffee-chemex-phone-laptop-6599/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/fresh-buttery-croissants-hot-cup-of-coffee-and-bowl-with-strawberries-6596/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/food-mozzarella-tomatoes-tomato-7765/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/pizza-kitchen-recipe-rolling-pin-9510/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+
+
 
 == Changelog ==
 
-= 0.0.3 =
+= 0.0.4 =
 * Initial release

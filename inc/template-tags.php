@@ -261,7 +261,8 @@ if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
 				.navigation .current, h2.entry-title a, h2.entry-title a, .site-footer .footer_menu ul li a, .widget-title { color: {$secondary}; }
 
 				.entry-meta a,.comments-area .logged-in-as a,a:hover,a.read-more ,
-				.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a
+				.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a,
+				.main-navigation ul ul a:hover
 				{ color : {$primary};}
 				.st-menu .btn-close-home .close-button,
 				.st-menu .btn-close-home .home-button,

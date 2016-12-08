@@ -581,7 +581,6 @@ a:hover, a:active {
 	color: #fff;
 	letter-spacing: 1px;
 	text-align: left;
-	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -1326,6 +1325,49 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
+.fooding-posts-widget .widget-posts li {
+	padding: 10px 0px 13px;
+	clear: both;
+}
+
+.fooding-posts-widget .widget-posts li.has-thumb .p-info {
+	margin-left: 80px;
+}
+
+.fooding-posts-widget .widget-posts li img {
+	width: 65px;
+	height: auto;
+	float: left;
+	margin-right: 10px;
+}
+
+.fooding-posts-widget .widget-posts li .p-info {
+	position: relative;
+	top: -2px;
+}
+
+.fooding-posts-widget .widget-posts li .entry-title {
+	font-size: 16px;
+	text-transform: none;
+	color: #222;
+	margin-bottom: 0px;
+	margin-top: 0;
+	display: inline-block;
+	font-weight: 500;
+}
+
+.fooding-posts-widget .widget-posts li .entry-date {
+	display: block;
+	font-size: 13px;
+	font-style: italic;
+	color: #777777;
+	margin-top: 4px;
+}
+
+.fooding-posts-widget .widget-posts li a {
+	line-height: 1.25;
+}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -1429,17 +1471,12 @@ a:hover, a:active {
 .site-header .site-branding {
 	float: none;
 	position: absolute;
-	bottom: 30px;
-	left: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	margin: 0;
 	padding: 0;
 	width: 100%;
-}
-
-@media (min-width: 499px) {
-	.site-header .site-branding {
-		bottom: 130px;
-	}
 }
 
 @media (max-width: 991px) {
@@ -1455,7 +1492,7 @@ a:hover, a:active {
 	text-decoration: none;
 	margin: 5px 0 15px 0;
 	position: relative;
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 }
 
 .site-header .site-branding .site-title a {
@@ -1468,7 +1505,7 @@ a:hover, a:active {
 	content: '';
 	position: absolute;
 	bottom: 0;
-	height: 1px;
+	height: 2px;
 	width: 15%;
 	left: 42%;
 	display: block;

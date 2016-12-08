@@ -211,3 +211,8 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Widgets
+ */
+require get_template_directory() . '/inc/widgets.php';
