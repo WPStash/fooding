@@ -1667,34 +1667,30 @@ a:hover, a:active {
 	margin-right: 5px;
 }
 
-.single-post .navigation .nav-links {
-	font-size: 16px;
-	color: #999;
+.single-post .navigation {
+	font-size: 18px;
 }
 
-.single-post .navigation .nav-links .nav-previous {
+.single-post .navigation .nav-previous {
 	float: left;
 	width: 45%;
 	text-align: left;
 }
 
-.single-post .navigation .nav-links .nav-next {
+.single-post .navigation .nav-next {
 	float: right;
 	width: 45%;
 	text-align: right;
 }
 
-.single-post .navigation .nav-links span {
+.single-post .navigation a {
+	color: #000;
+}
+
+.single-post .navigation span {
 	font-size: 13px;
-}
-
-.single-post .navigation .nav-links h5 {
-	margin: 0;
-	font-weight: 400;
-}
-
-.single-post .navigation .nav-links h5 a {
-	color: #444;
+	display: block;
+	color: #888;
 }
 
 /* search form */

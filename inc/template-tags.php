@@ -96,7 +96,7 @@ function fooding_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'fooding' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'fooding' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged : %1$s', 'fooding' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -270,7 +270,7 @@ if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
 					background-color: {$primary};
 					border-color : {$primary};
 				}
-
+				.widget_tag_cloud a:hover { border-color :  {$primary}; color:  {$primary}; }
 				button:hover, input[type=\"button\"]:hover,
 				input[type=\"reset\"]:hover,
 				input[type=\"submit\"]:hover,

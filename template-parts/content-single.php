@@ -9,7 +9,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="entry-thumb">
 		<?php the_post_thumbnail( 'fooding-homepage-1' ); ?>
@@ -36,28 +36,13 @@
 	</div><!-- .entry-content -->
 	<?php } ?>
 
-	<?php
-	$prev_link = get_previous_post_link( '%link', '%title', true );
-	$next_link = get_next_post_link( '%link', '%title', true );
-	?>
-	<?php if ( $prev_link || $next_link ) : ?>
-	<div class="navigation">
-		<div class="nav-links">
-			<div class="nav-previous">
-				<?php if ( $prev_link ) { ?>
-				<span><?php esc_html_e( 'Previous article', 'fooding' ) ?></span>
-				<h5><?php echo $prev_link; ?></h5>
-				<?php } ?>
-			</div>
-			<div class="nav-next">
-				<?php if ( $next_link ) { ?>
-				<span><?php esc_html_e( 'Next article', 'fooding' ) ?></span>
-				<h5><?php echo $next_link; ?></h5>
-				<?php } ?>
-			</div>
-		</div>
-	</div>
-	<?php endif; ?>
+	<?php the_post_navigation( array(
+            'prev_text'                  => __( '<span>Previous article</span> %title' ),
+            'next_text'                  => __( '<span>Next article</span> %title' ),
+            'in_same_term'               => true,
+            'taxonomy'                   => __( 'post_tag' ),
+            'screen_reader_text' => __( 'Continue Reading' ),
+        ) ); ?>
 
 	<footer class="entry-footer">
 		<?php fooding_entry_footer(); ?>

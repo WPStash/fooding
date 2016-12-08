@@ -260,29 +260,24 @@
 }
 .single-post {
     .navigation {
-        .nav-links {
-            font-size: 16px;
-            color: #999;
-            .nav-previous {
-                float: left;
-                width: 45%;
-                text-align: left;
-            }
-            .nav-next {
-                float: right;
-                width: 45%;
-                text-align: right;
-            }
-            span {
-                font-size: 13px;
-            }
-            h5 {
-                margin: 0;
-                font-weight: 400;
-                a {
-                    color: #444;
-                }
-            }
+        font-size: 18px;
+        .nav-previous {
+            float: left;
+            width: 45%;
+            text-align: left;
+        }
+        .nav-next {
+            float: right;
+            width: 45%;
+            text-align: right;
+        }
+        a {
+            color: #000;
+        }
+        span {
+            font-size: 13px;
+            display: block;
+            color: #888;
         }
     }
 }
