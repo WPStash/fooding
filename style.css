@@ -1499,6 +1499,7 @@ a:hover, a:active {
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .site-header .site-branding .site-title:after {

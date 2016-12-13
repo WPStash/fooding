@@ -69,11 +69,11 @@ function fooding_header_style() {
 		// If the user has set a custom color for the text use that.
 		else :
 	?>
-		.site-title a,
-		.site-description {
+		.site-header .site-branding .site-title a,
+		.site-header .site-branding .site-description {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
-		
+
 	<?php endif; ?>
 	</style>
 	<?php

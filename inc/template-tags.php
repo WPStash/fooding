@@ -280,6 +280,12 @@ if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
 						border-color: {$secondary};
 				}";
 
+		$header_text_color = get_header_textcolor();
+		if ( $header_text_color ) {
+			$custom_css .= '.site-header .site-branding .site-title:after {
+				background-color: #'.$header_text_color.';
+			}';
+		}
 
 		wp_add_inline_style( 'fooding-style', $custom_css );
 	}
