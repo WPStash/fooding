@@ -40,7 +40,6 @@
             'prev_text'                  => __( '<span>Previous article</span> %title', 'fooding' ),
             'next_text'                  => __( '<span>Next article</span> %title', 'fooding' ),
             'in_same_term'               => true,
-            'taxonomy'                   => __( 'post_tag' ),
             'screen_reader_text' => __( 'Continue Reading', 'fooding' ),
         ) ); ?>
 
