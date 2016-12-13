@@ -24,7 +24,6 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<?php if ( ! empty ( get_the_content() ) ) { ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
@@ -34,7 +33,6 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php } ?>
 
 	<?php the_post_navigation( array(
             'prev_text'                  => __( '<span>Previous article</span> %title', 'fooding' ),
