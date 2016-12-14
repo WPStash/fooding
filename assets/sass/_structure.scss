@@ -101,7 +101,7 @@
             font-size: 40px;
             line-height: 40px;
             text-decoration: none;
-            margin: 5px 0 15px 0;
+            margin: 5px 0;
             position: relative;
             padding-bottom: 20px;
             a {
@@ -110,16 +110,7 @@
                 font-weight: bold;
                 text-transform: uppercase;
             }
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                height: 2px;
-                width: 15%;
-                left: 42%;
-                display: block;
-                background: #fff;
-            }
+
         }
         .site-description {
             width: 60%;

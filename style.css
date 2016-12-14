@@ -1490,7 +1490,7 @@ a:hover, a:active {
 	font-size: 40px;
 	line-height: 40px;
 	text-decoration: none;
-	margin: 5px 0 15px 0;
+	margin: 5px 0;
 	position: relative;
 	padding-bottom: 20px;
 }
@@ -1500,17 +1500,6 @@ a:hover, a:active {
 	text-decoration: none;
 	font-weight: bold;
 	text-transform: uppercase;
-}
-
-.site-header .site-branding .site-title:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	height: 2px;
-	width: 15%;
-	left: 42%;
-	display: block;
-	background: #fff;
 }
 
 .site-header .site-branding .site-description {
