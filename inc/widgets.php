@@ -1,4 +1,9 @@
 <?php
+/**
+ * Fooding Recent Posts widget
+ *
+ * @package Fooding
+ */
 function fooding_posts_widget() {
     register_widget( 'Fooding_Posts_Widget' );
 }

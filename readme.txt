@@ -45,5 +45,5 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 
 == Changelog ==
 
-= 0.0.5 =
+= 0.0.6 =
 * Initial release
