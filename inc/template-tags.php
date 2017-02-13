@@ -162,13 +162,12 @@ if ( ! function_exists( 'fooding_comments' ) ) :
  * @return void
  */
  function fooding_comments( $comment, $args, $depth ) {
- 	$GLOBALS['comment'] = $comment;
  	switch ( $comment->comment_type ) :
  		case 'pingback' :
  		case 'trackback' :
  	?>
  	<li class="pingback">
- 		<p><?php _e( 'Pingback:', 'fooding' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'fooding' ), ' ' ); ?></p>
+ 		<p><?php esc_html_e( 'Pingback:', 'fooding' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'fooding' ), ' ' ); ?></p>
  	<?php
  			break;
  		default :
@@ -182,14 +181,14 @@ if ( ! function_exists( 'fooding_comments' ) ) :
 
  			<div class="comment-wrapper">
  				<?php if ( $comment->comment_approved == '0' ) : ?>
- 					<em><?php _e( 'Your comment is awaiting moderation.', 'fooding' ); ?></em>
+ 					<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'fooding' ); ?></em>
  				<?php endif; ?>
 
  				<div class="comment-meta comment-metadata">
  					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
  					<?php
  						/* translators: 1: date, 2: time */
- 						printf( __( '%1$s at %2$s', 'fooding' ), get_comment_date(), get_comment_time() ); ?>
+ 						printf( esc_html__( '%1$s at %2$s', 'fooding' ), get_comment_date(), get_comment_time() ); ?>
  					</time></a>
  				</div><!-- .comment-meta .commentmetadata -->
  				<div class="comment-content"><?php comment_text(); ?></div>
@@ -280,7 +279,7 @@ if ( ! function_exists( 'fooding_custom_inline_style' ) ) {
 						border-color: {$secondary};
 				}";
 
-		$header_text_color = get_header_textcolor();
+		$header_text_color = esc_attr( get_header_textcolor() );
 		if ( $header_text_color ) {
 			$custom_css .= '.site-header .site-branding .site-title:after {
 				background-color: #'.$header_text_color.';

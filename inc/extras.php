@@ -54,18 +54,18 @@ add_filter( 'post_class', 'fooding_no_thumbnail_class' );
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
- if ( ! function_exists( 'fooding_custom_excerpt_length' ) ) :
+ if ( ! function_exists( 'fooding_custom_excerpt_length' ) && ! is_admin() ) :
  function fooding_custom_excerpt_length( $length ) {
      return 30;
  }
  add_filter( 'excerpt_length', 'fooding_custom_excerpt_length', 999 );
  endif;
 
- if ( ! function_exists( 'fooding_excerpt_more' ) ) :
+ if ( ! function_exists( 'fooding_excerpt_more' ) && ! is_admin() ) :
  function fooding_excerpt_more( $more ) {
  	return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
-         get_permalink( get_the_ID() ),
-         __( '[Continue Reading]', 'fooding' )
+        esc_url( get_permalink( get_the_ID() ) ),
+        sprintf( esc_html__( '[Continue Reading]', 'fooding' ) )
      );
  }
  add_filter( 'excerpt_more', 'fooding_excerpt_more' );

@@ -48,7 +48,7 @@ function fooding_customize_register( $wp_customize ) {
 				$wp_customize->add_control( 'fooding_homepage_layout',
 					array(
 						'label' 		=> esc_html__( 'Frontpage Layout', 'fooding' ),
-						'description'   => 'Only apply when frontpage is a static page',
+						'description'   => esc_html__( 'Only apply when frontpage is a static page', 'fooding' ),
 						'type'			=> 'radio',
 						'section' 	=> 'fooding_general',
 						'choices'   => array(
@@ -108,7 +108,6 @@ function fooding_customize_register( $wp_customize ) {
 						'label' 		=> esc_html__( 'Turn on/off the staff picks', 'fooding' ),
 						'type'			=> 'checkbox',
 						'section' 		=> 'staff_picks',
-						//'description'	=> __( 'Turn on/off the staff picks.', 'fooding' )
 					)
 				);
 
@@ -120,7 +119,7 @@ function fooding_customize_register( $wp_customize ) {
 				);
 				$wp_customize->add_control( 'fooding_staff_picks_tags',
 					array(
-						//'label' 		=> esc_html__( 'Number:', 'fooding' ),
+
 						'type'			=> 'text',
 						'section' 		=> 'staff_picks',
 						'description'	=> esc_html__( 'Enter post tags, separated by commas and without space.', 'fooding' )
@@ -135,7 +134,7 @@ function fooding_customize_register( $wp_customize ) {
 				);
 				$wp_customize->add_control( 'number_staff_picks',
 					array(
-						//'label' 		=> esc_html__( 'Number:', 'fooding' ),
+
 						'type'			=> 'text',
 						'section' 		=> 'staff_picks',
 						'description'	=> esc_html__( 'Enter number post display on Staff section.', 'fooding' )
@@ -150,7 +149,7 @@ function fooding_customize_register( $wp_customize ) {
 				) );
 
 				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
-					'label'        => __( 'Primary Color', 'fooding' ),
+					'label'        => esc_html__( 'Primary Color', 'fooding' ),
 					'section'    => 'colors',
 					'settings'   => 'primary_color',
 				) ) );
@@ -161,7 +160,7 @@ function fooding_customize_register( $wp_customize ) {
 				    'default'     => '#444',
 				) );
 				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(
-					'label'        => __( 'Secondary Color', 'fooding' ),
+					'label'        => esc_html__( 'Secondary Color', 'fooding' ),
 					'section'    => 'colors',
 					'settings'   => 'secondary_color',
 				) ) );
@@ -187,14 +186,11 @@ function fooding_sanitize_file_url( $file_url ) {
 	$output = '';
 	$filetype = wp_check_filetype( $file_url );
 	if ( $filetype["ext"] ) {
-		$output = esc_url( $file_url );
+		$output = esc_url_raw( $file_url );
 	}
 	return $output;
 }
 
-function fooding_sanitize_number( $input ) {
-    return force_balance_tags( $input );
-}
 
 function fooding_sanitize_select( $input, $setting ) {
 	$input = sanitize_key( $input );

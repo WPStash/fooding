@@ -34,12 +34,14 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php the_post_navigation( array(
-            'prev_text'                  => __( '<span>Previous article</span> %title', 'fooding' ),
-            'next_text'                  => __( '<span>Next article</span> %title', 'fooding' ),
+	<?php
+	the_post_navigation( array(
+            'prev_text'                  => '<span>' . esc_html__( 'Previous article', 'fooding' ) .'</span> %title',
+            'next_text'                  => '<span>' . esc_html__( 'Next article', 'fooding' ) .'</span> %title',
             'in_same_term'               => true,
-            'screen_reader_text' => __( 'Continue Reading', 'fooding' ),
-        ) ); ?>
+            'screen_reader_text' 		 => esc_html__( 'Continue Reading', 'fooding' ),
+    ) );
+	?>
 
 	<footer class="entry-footer">
 		<?php fooding_entry_footer(); ?>

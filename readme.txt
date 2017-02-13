@@ -6,7 +6,7 @@ Tags: one-column, two-columns, right-sidebar, grid-layout, footer-widgets, blog,
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 0.0.4
+Stable tag: 0.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,7 +34,7 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 * Font Awesome, SIL OFL 1.1. (http://scripts.sil.org/OFL) http://fortawesome.github.io/Font-Awesome/license/
 * jQuery Parallax, The MIT License (MIT) http://pixelcog.github.io/parallax.js/
 * sidebarEffects, Licensed under the MIT license. https://gist.github.com/Braunson/6887262
-* classie, class helper functions from bonzo https://github.com/ded/bonzo
+* classie, The MIT License (MIT) https://github.com/ded/bonzo
 * Image use in screenshot: https://www.pexels.com/photo/desk-coffee-chemex-phone-laptop-6599/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 * Image use in screenshot: https://www.pexels.com/photo/fresh-buttery-croissants-hot-cup-of-coffee-and-bowl-with-strawberries-6596/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 * Image use in screenshot: https://www.pexels.com/photo/food-mozzarella-tomatoes-tomato-7765/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -45,5 +45,5 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 
 == Changelog ==
 
-= 0.0.6 =
+= 0.0.7 =
 * Initial release

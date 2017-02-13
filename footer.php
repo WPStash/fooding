@@ -16,7 +16,7 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 
-			<?php $enable_staff_picks = get_theme_mod( 'fooding_staff_picks', true ) ;
+			<?php $enable_staff_picks = esc_attr( get_theme_mod( 'fooding_staff_picks', true ) ) ;
 
 			if ( $enable_staff_picks == true ) {
 				get_template_part( 'template-parts/content', 'staff' );
@@ -27,9 +27,7 @@
 			<?php if ( is_active_sidebar( 'footer' ) ) {  ?>
 			<div class="footer-widgets">
 				<div class="container">
-					<?php
-							dynamic_sidebar( 'footer' );
-					?>
+					<?php	dynamic_sidebar( 'footer' );	?>
 				</div>
 			</div>
 			<?php } ?>

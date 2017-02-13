@@ -26,7 +26,8 @@ class Fooding_Posts_Widget extends WP_Widget {
             'orderby' => 'date',
             'order' => 'desc',
         ) );
-        $title =  isset( $instance['title'] ) ? $instance['title'] : esc_html__( 'Recent Posts', 'fooding' );
+
+        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
         $post_args = array(
             'posts_per_page' => absint( $instance['number'] ),
             'order' =>   $instance['order'],
@@ -60,10 +61,7 @@ class Fooding_Posts_Widget extends WP_Widget {
                     <div class="p-info">
                     <h2 class="entry-title"><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title( ); ?></a></h2>
                     <?php
-                    printf(
-                        esc_html_x( '%s', 'post date', 'fooding' ),
-                        '<span class="entry-date">' . $time_string . '</span>'
-                    );
+                    echo '<span class="entry-date">' . $time_string . '</span>';
                     ?>
                     </div>
                 </li>
@@ -123,7 +121,7 @@ class Fooding_Posts_Widget extends WP_Widget {
             'order' => 'desc',
             'skip_featured' => ''
         ) );
-        $instance['title'] = strip_tags( $new_instance['title'] );
+        $instance['title'] = sanitize_text_field( $new_instance['title'] );
         $instance['number'] = ! absint( $new_instance['number'] ) ? 4 : absint( $new_instance['number'] );
         $instance['orderby'] =  sanitize_text_field( $new_instance['orderby'] );
         $instance['order'] =  sanitize_text_field( $new_instance['order'] );

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Frontpage
+
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -17,17 +17,20 @@ get_header(); ?>
 
 		<?php
 		global $wp_query;
-		$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
-		$args = array( 'post_type' => 'post', 'paged' => $paged );
 
-		$enable_staff_picks = get_theme_mod( 'fooding_staff_picks', true ) ;
-		if ( $enable_staff_picks == true ) {
-
+		if ( get_query_var('paged') ) {
+			$paged = get_query_var('paged');
+		} elseif ( get_query_var('page') ) { 
+			$paged = get_query_var('page');
+		} else {
+			$paged = 1;
 		}
+
+		$args = array( 'post_type' => 'post', 'paged' => $paged );
 
         $query = new WP_Query( $args );
 
-		$homepage_layout = get_theme_mod( 'fooding_homepage_layout', 'default' );
+		$homepage_layout = esc_attr( get_theme_mod( 'fooding_homepage_layout', 'default' ) );
 		$count = 0;
 		if ( $query->have_posts() ) :
 
@@ -67,11 +70,9 @@ get_header(); ?>
 
 		endif;
 
-
-		$wp_query = $query;
-		if (  $query->max_num_pages > 1  ) {
+		if (  $wp_query->max_num_pages > 1  ) {
 			echo '<div class="post-pagination">';
-			the_posts_pagination(array(
+			the_posts_pagination( array(
 				'prev_next' => true,
 				'prev_text' => '',
 				'next_text' => '',
