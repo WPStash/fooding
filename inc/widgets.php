@@ -47,10 +47,6 @@ class Fooding_Posts_Widget extends WP_Widget {
             <ul class="widget-posts"><?php
             while ( $query->have_posts() ) {
                 $query->the_post();
-                $time_string = sprintf( $time_string,
-                    esc_attr( get_the_date( 'c' ) ),
-                    esc_html( get_the_date() )
-                );
                 ?>
                 <li class="<?php echo ( has_post_thumbnail() ) ? 'has-thumb' : 'no-thumb'; ?>">
                     <?php
@@ -61,7 +57,7 @@ class Fooding_Posts_Widget extends WP_Widget {
                     <div class="p-info">
                     <h2 class="entry-title"><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title( ); ?></a></h2>
                     <?php
-                    echo '<span class="entry-date">' . $time_string . '</span>';
+                    echo '<span class="entry-date">' . get_the_date() . '</span>';
                     ?>
                     </div>
                 </li>
