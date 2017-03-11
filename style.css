@@ -2017,6 +2017,10 @@ a.read-more:hover {
 	text-decoration: none;
 }
 
+.comments-area .comment-list li .comment-wrapper .comment-meta .fn {
+	font-weight: bold;
+}
+
 .comments-area .comment-list li .comment-wrapper .comment-author {
 	margin-bottom: 20px;
 }

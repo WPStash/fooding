@@ -196,11 +196,14 @@ a.read-more {
 				background: #f8f9f9 none repeat scroll 0 0;
 				margin-left: 4rem;
 				padding: 0 20px;
-				position: relative;				
+				position: relative;
 				.comment-meta {
 					margin-bottom: 20px;
 					a {
 						text-decoration: none;
+					}
+					.fn {
+						font-weight: bold;
 					}
 				}
 				.comment-author {
