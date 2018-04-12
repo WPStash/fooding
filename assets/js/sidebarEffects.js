@@ -18,7 +18,7 @@
          return e.parentNode && hasParentClass(e.parentNode, classname);
      }
 
-     // http://coveroverflow.com/a/11381730/989439
+    
      function mobilecheck() {
          var check = false;
          (function(a) {
