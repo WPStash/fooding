@@ -45,5 +45,11 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 
 == Changelog ==
 
+= 0.0.8 =
+* Update Footer Author Name & Link
+* Support Gutenberg
+* Support Jetpack Infinite Scroll
+
+
 = 0.0.7 =
 * Initial release

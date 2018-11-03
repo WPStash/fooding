@@ -243,7 +243,7 @@ if ( ! function_exists( 'fooding_footer_site_info' ) ) {
     {
         ?>
 		<div class="theme-info-text">
-        	<?php printf( esc_html__( 'Fooding Theme by %1$s', 'fooding' ), '<a href="https://wpstash.com/" rel="designer">WPStash</a>' ); ?>
+        	<?php printf( esc_html__( 'Fooding Theme by %1$s', 'fooding' ), '<a href="https://freeresponsivethemes.com/fooding/" rel="nofollow">FRT</a>' ); ?>
 		</div>
 		<?php
     }
