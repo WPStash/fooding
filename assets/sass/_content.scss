@@ -243,11 +243,14 @@ a.read-more {
 		width: auto;
 		font-weight: bold;
 	}
-	h3#reply-title {
+	#reply-title {
 		border-bottom: 1px solid #e5e5e5;
 		font-size: 22px;
 		margin-bottom: 40px;
 		padding-bottom: 10px;
 		text-transform: uppercase;
+		a {
+			margin-left: 7px;
+		}
 	}
 }

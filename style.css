@@ -1577,12 +1577,14 @@ a.read-more {
 #respond input#submit {
   width: auto;
   font-weight: bold; }
-#respond h3#reply-title {
+#respond #reply-title {
   border-bottom: 1px solid #e5e5e5;
   font-size: 22px;
   margin-bottom: 40px;
   padding-bottom: 10px;
   text-transform: uppercase; }
+  #respond #reply-title a {
+    margin-left: 7px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
