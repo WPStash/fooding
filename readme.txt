@@ -4,9 +4,9 @@ Contributors: famethemes
 Tags: one-column, two-columns, right-sidebar, grid-layout, footer-widgets, blog, news, photography, custom-menu, custom-header, custom-colors, custom-background, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 
 
-Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 0.0.7
+Requires at least: 5.0
+Tested up to: 5.8.1
+Stable tag: 0.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,9 @@ Fooding is a good-looking, featured-packed theme that allows you to tell your st
 
 
 == Changelog ==
+= 0.0.9 =
+* WordPress 5.8 Compatible.
+
 
 = 0.0.8 =
 * Update Footer Author Name & Link

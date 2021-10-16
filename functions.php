@@ -78,7 +78,8 @@ function fooding_setup() {
 	 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
 	 */
 	add_theme_support( 'align-wide' );
-
+	add_theme_support( "wp-block-styles" ) ;
+	add_theme_support( "responsive-embeds" ) ;
 }
 endif;
 add_action( 'after_setup_theme', 'fooding_setup' );
